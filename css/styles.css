@@ -1,9 +1,4 @@
-@charset "UTF-8";
-body {
-}
-/* RESET */
-
-/* v1.0 | 20080212 */
+/* CSS RESET */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	margin: 0;
@@ -47,14 +42,13 @@ table {
 ----------------------------------------------- */
 
 body {
-	background-color: #fff;
+	background-color: #00222e;
 	font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
 	font-size: 18px;
 	line-height: 24px;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
-	
 	text-shadow: 1px 1px 0px #fff;
 }
 h1 {
@@ -101,9 +95,9 @@ a:hover {
 .container_wide {
 	padding:30px 0 30px 0;
 	width:100%;
-	background-color:#efefef;
-	border-bottom: 1px solid #ccc;
-	border-top: 1px solid #fff;
+	background-color:#e4e4e4;
+	border-bottom: 1px dashed #666;
+	border-top: 1px dashed #fff;
 }
 .container_fixed {
 	width:960px;
@@ -121,7 +115,7 @@ a:hover {
 	height: auto;
 	width: 100%;
 	background-color:#00222e;
-	border-bottom: 1px solid #444;
+	border-bottom: 1px solid black;
 	z-index: 1000;
 }
 #logo {
@@ -156,7 +150,7 @@ a:hover {
 	text-decoration:none;
 	border-bottom: 1px solid #fff;
 }
-#nav ul {
+#nav ul, #social_media ul {
 	font-size:16px;
 }
 #nav ul li {
@@ -168,99 +162,85 @@ a:hover {
 	position:relative;
 	float:right;
 }
+#social_media {
+	padding-right:25px;
+	float:right;
+}
+#social_media li#twitter {
+	padding-left:25px;
+	background: url(../img/icon_twitter.png) no-repeat center left;
+}
+#social_media a:link, #social_media a:visited, #social_media a:focus {
+	color:#499ff3;
+}
+#social_media a:hover {
+	color:#fff;
+}
 /* intro
 ----------------------------------------------- */
 
 #intro {
-	padding-top:45px;
-	padding-bottom:45px;
-	/*height:400px;*/
+	margin-top:45px;
+	padding-top:70px;
+	padding-bottom:60px;
 	text-align: center;
 	border:none;
-	background-color:#00222e;
-	background-color:#3399ff;
-	background-color:#0461c0;
-	/*background-image: url(../img/background_techcrawleast_illustration_2.png);
+	background-color:#0090f2;
+	background-image: url(../img/background_round_wave.png);
 	background-repeat: no-repeat;
-	background-position: center center;*/
+	background-position: center center;
 }
-
 #intro h1 {
-	padding:30px 0 0 0;
-	margin:15px 10px 0 10px;
-	font-size: 120px !important;
-	line-height: 90px;
-	font-weight:normal;
-	text-transform:uppercase;
-	color:#fff;
+	padding:0;
+	margin:0;
 }
-
 /* call-to-action
 ----------------------------------------------- */
 
-#intro_register {
-	background-color:#fff;
+#intro_action {
+	background-color:#fdfee0;
 }
-
 .call_to_action {
 	margin: 0 10px 0 10px;
 	font-size:28px;
 	line-height:28px;
-	/*padding:15px 0 15px 0;*/
-	/*border:1px solid #ccc;
-	background-color:#fff;*/
 	text-align:center;
-	
-	/*-moz-border-radius-topleft: 15px;
-	-moz-border-radius-topright: 15px;
-	-moz-border-radius-bottomleft: 15px;
-	-moz-border-radius-bottomright: 15px;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
-	-webkit-border-top-left-radius: 15px;
-	-webkit-border-top-right-radius: 15px;
-	-webkit-border-bottom-left-radius: 15px;
-	-webkit-border-bottom-right-radius: 15px;*/
 }
 .call_to_action h2 {
-	padding-top:10px;
 	padding-bottom:10px;
-	font-size:34px !important;
-	/*font-family: "facitweb-1","facitweb-2",sans-serif;*/
-	line-height:34px;
-	/*color:#0461c0;
-	border-bottom:2px solid #fff;*/
+	font-size:36px !important;
+	line-height:36px;
 }
-
-.call_to_action a {
-	color:#ff4439;
-	border:none;
-}
-
 .call_to_action h3 {
+	padding-bottom:0;
 	font-size:26px !important;
 	line-height:26px;
 	font-weight:normal;
 	text-transform:none;
 }
-
+.call_to_action a:link, .call_to_action a:visited, .call_to_action a:focus {
+	color:#ff4439;
+	border-bottom:1px solid #ff4439;
+}
+.call_to_action a:hover {
+	color:#499ff3;
+	border-bottom:1px solid #499ff3;
+}
 /* summary
 ----------------------------------------------- */
 
 #summary {
-	/*background-color:#fff;*/
+	background-color:#fff;
 	font-size:18px;
 	line-height:24px;
 }
-
 #summary h3 {
 	font-size:28px;
 	line-height:28px;
-	/*text-transform:uppercase;*/
 }
-
+#summary h4 {
+	font-style:italic;
+}
 #companies, #attendees {
 	margin:0 10px 0 10px;
 	position:relative;
@@ -268,8 +248,6 @@ a:hover {
 	width:460px;
 	text-align:center;
 }
-
-
 /* details
 ----------------------------------------------- */
 
@@ -277,50 +255,45 @@ a:hover {
 	border-bottom:none;
 	padding-bottom:0;
 }
-
 #details_text {
 	border-top:none;
 }
-
 #map, #venue, #event_links {
 	margin:0 10px 0 10px;
 	width:298px;
 	position:relative;
 	float:left;
-	border:1px solid #ccc;
+	border:1px solid #aaa;
 	background-color:#fff;
 }
-
 #event_links {
 	width:300px;
 	border:none;
 	background:none;
 }
 #map {
-	width:596px;
+	width:618px;
 }
-
+#venue {
+}
 #map iframe, #venue img {
-	padding:10px;
+	padding:9px;
 }
-
 #event_links ul {
-	/*margin-top:20px;*/
 	margin-top:5px;
 	border-top:1px solid #ccc;
-	border-bottom:1px solid #fff;
+	border-bottom:1px solid #efefef;
 }
 #event_links li {
 	/*padding:8px 0 8px 25px;*/
 	padding:8px 0 8px 0;
 	font-size: 18px;
 	border-bottom: 1px solid #ccc;
-	border-top:1px solid #fff;
+	border-top:1px solid #efefef;
 	background-repeat: no-repeat;
 	background-position: left center;
 }
-/*
-li#map_link_car {
+/*li#map_link_car {
 	background-image: url(../img/icon_car.png);
 }
 
@@ -336,7 +309,7 @@ li#map_link_hotel {
 	background-image: url(../img/icon_hotel.png);
 }
 
-*/
+
 /* faqs
 ----------------------------------------------- */
 
@@ -356,15 +329,13 @@ li#map_link_hotel {
 	font-size:24px;
 	line-height:24px;
 }
-
 /* register
 ----------------------------------------------- */
 
 #register {
+	background-color:#fdfee0;
 	text-align:center;
-
 }
-
 #register h3 {
 	font-size:28px;
 	line-height:28px;
@@ -372,24 +343,74 @@ li#map_link_hotel {
 	border:1px solid #666;
 	background-color:#fff;
 }
-
 #register h3 a {
 	color:#ff4439;
 	border:none;
 }
+/* register PAGE
+----------------------------------------------- */
 
+#content_register {
+	margin-top:45px;
+}
+#register_form {
+	background-color:#fff;
+	border-bottom:none;
+}
+form {
+	margin-right:auto;
+	margin-left:auto;
+	width: 700px;
+}
+label {
+	width: 250px;
+	padding: 0 10px 0 0;
+	text-align: right;
+	position: relative;
+	float: left;
+}
+.form_row {
+	padding:0 0 15px 0;
+}
+.form_row p {
+	width:250px;
+	float:left;
+	text-align:right;
+	font-size:12px;
+	line-height:normal;
+}
+.form_row span {
+	padding-left:2px;
+	color:red;
+}
+form button {
+	margin-left:260px;
+}
+input, textarea {
+	float:left;
+	font-size:16px;
+}
+#terms {
+	margin-top:30px;
+	margin-left:260px;
+	font-size:12px;
+	line-height:normal;
+}
+button {
+	font-size:18px;
+	padding:10px;
+}
 /* sponsors
 ----------------------------------------------- */
 
 #sponsors {
 	text-align:center;
 	background-color:#fff;
+	border:none;
 }
-
 #sponsors h3 {
 	font-size:18px;
 }
-
 #sponsors p {
 	font-size:12px;
 }
@@ -397,24 +418,29 @@ li#map_link_hotel {
 	margin:15px 10px 15px 10px;
 	position:relative;
 	float:left;
-	height:125px;
+	/*height:125px;*/
 	width:300px;
-	text-align:center;
-	/*border:1px dashed #000;*/
+	text-align:center;/*border:1px dashed #000;*/
 }
-
 /* foot
 ----------------------------------------------- */
+
 #foot {
-	background-color:#333;
+	background-color:#00222e;
 	padding:30px 0 30px 0;
 	color:#ccc;
 	font-size:14px;
 	text-align:center;
 }
-/* classes
+a.sig:link, a.sig:visited, a.sig:focus {
+	color:#ccc;
+	text-decoration:underline;
+}
+a.sig:hover {
+	color:#fff;
+}
+/* float clearing
 ----------------------------------------------- */
-
 
 /* float clearing for IE6 */
 * html .clear {
@@ -433,7 +459,6 @@ li#map_link_hotel {
 	height: 0;
 	visibility: hidden;
 }
-
 .clear {
 	clear: both;
 	content: ".";
