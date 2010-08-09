@@ -5,6 +5,24 @@
 <title>Tech Crawl East</title>
 <script type="text/javascript" src="http://use.typekit.com/loz4jeq.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script type="text/javascript">
+  function showThankYou() {
+  	document.getElementById("form-message").style.display=""; 
+  	document.getElementById("form-message").innerHTML="<p>Thanks for submitting your application!  We will contact you by email to let you know if you've been selected.</p>";
+  }
+  
+  function formCompleted() {
+    var elems = ["company_name", "contact_name", "email", "phone", "company_website", "location", "pitch_link"];
+    var elem;
+    for (elem in elems) {
+      if (document.getElementById(elems[elem]).value === "") {
+        alert("Please complete every field");
+        return false;
+      }
+    }
+    return true;
+  }
+</script>
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="body">
@@ -32,50 +50,53 @@
   </div>
   <div class="container_wide" id="register_form">
     <div class="container_fixed">
-      <form action="" method="get">
+      <form id="application" action="" method="post" target="fake-target" onsubmit="if (formCompleted()) { this.action='http://spreadsheets.google.com/formResponse?formkey=dDJrV05leVRlYUpBS0hTYjZsRy1GcGc6MQ'; showThankYou(); return true; } else { return false; }">
         <div class="form_subgroup">
           <div class="form_row">
             <label for="company_name">Company Name<span class="required">*</span></label>
-            <input id="company_name" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="company_name" name="entry.0.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="contact_name">Contact Name<span class="required">*</span></label>
-            <input id="contact_name" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="contact_name" name="entry.1.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="email">Email<span class="required">*</span></label>
-            <input id="email" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="email" name="entry.2.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="phone">Phone Number<span class="required">*</span></label>
-            <input id="phone" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="phone" name="entry.3.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="company_website">Company Website<span class="required">*</span></label>
-            <input id="company_website" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="company_website" name="entry.4.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="location">Location<span class="required">*</span></label>
-            <input id="location" name="" size="30" type="text" value="" disabled="disabled" />
+            <input id="location" name="entry.5.single" size="30" type="text" value="" />
             <div class="clear"></div>
           </div>
           <div class="form_row">
             <label for="pitch_link">Link to 60 Second Pitch Demo<span class="required">*</span></label>
-            <input id="pitch_link" name="" size="30" type="text" value="" disabled="disabled" />
-            <p>Please record a 30 second clip of your best pitch, and upload to your preferred video hosting site.</p>
+            <input id="pitch_link" name="entry.6.single" size="30" type="text" value="" />
+            <p>Please record a 60 second clip of your best pitch, and upload to your preferred video hosting site.</p>
             <div class="clear"></div>
           </div>
         </div>
-        <button type="button">Registration Will Open Next Week</button>
+        <button type="submit" id="submit_button">Submit Application</button>
+        <div style="display:none;" id="form-message"></div>
+        
         <!-- TERMS AND CONDITIONS - UNCOMMENT BELOW OR DELETE IF DESIRED 
         <div id="terms">
           <p>This is a bit of text for disclaimers, implied warranties or lack thereof, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac eros elit. Vivamus diam elit, suscipit at rhoncus quis, euismod eu dolor. Pellentesque nec ipsum eget nulla gravida accumsan eu at augue. Vestibulum porttitor justo et massa rhoncus vitae tempor dolor tincidunt. Nunc non nunc in diam viverra hendrerit. Nam ac nisl tortor. Praesent quam diam, lacinia et pretium a, adipiscing nec libero.</p>
         </div>-->
+        <iframe id="fake-target" name="fake-target" style="width:0px; height:0px; border:0px;"></iframe>
       </form>
       <div class="clear"></div>
     </div>
