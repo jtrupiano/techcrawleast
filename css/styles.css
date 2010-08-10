@@ -353,11 +353,9 @@ li#map_link_hotel {
 #content_register {
 	margin-top:45px;
 }
-
 #content_register #intro_register {
 	border-top:none;
 }
-
 #register_form {
 	background-color:#fff;
 	border-bottom:none;
@@ -387,6 +385,14 @@ label {
 .form_row span {
 	padding-left:2px;
 	color:red;
+}
+#form-message {
+	color:#393;
+	font-size:21px;
+	line-height:28px;
+	padding-top:35px;
+	padding-bottom:15px;
+	text-align:center;
 }
 form button {
 	margin-left:260px;
