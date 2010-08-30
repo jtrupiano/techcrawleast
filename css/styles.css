@@ -411,6 +411,59 @@ button {
 	font-size:18px;
 	padding:10px;
 }
+/* information for presenters PAGE
+----------------------------------------------- */
+
+#content_information {
+	margin-top:45px;
+}
+#content_information #intro_information {
+	border-top:none;
+}
+#information_container {
+	background-color:#fff;
+	border-bottom:none;
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
+}
+
+#information_container #information {
+  float: left;
+  width: 56%;
+  margin-right: 5%;
+}
+
+#information_container #information h3 {
+  margin-top: 10px;
+}
+
+#information_container #information li, #information_container #information p {
+  margin-right: 0px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#information_container #information ul.indent {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#information_container #information ul.indent li {
+  margin-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 0px;
+}
+
+#information_container #photos {
+  float: left;
+  width: 38%;
+}
+
+#information_container #photos .caption {
+  font-size: 12px;
+}
+
+
 /* sponsors
 ----------------------------------------------- */
 
