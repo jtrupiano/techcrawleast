@@ -463,6 +463,24 @@ button {
   font-size: 12px;
 }
 
+/* organizers PAGE
+----------------------------------------------- */
+
+#content_organizers {
+	margin-top:45px;
+}
+#content_organizers #intro_organizers {
+	border-top:none;
+}
+
+#content_organizers img {
+  float: left;
+  padding-right: 8px;
+}
+
+.container_wide_last {
+  border-bottom: 0;
+}
 
 /* sponsors
 ----------------------------------------------- */
