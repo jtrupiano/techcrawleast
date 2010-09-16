@@ -482,6 +482,24 @@ button {
   border-bottom: 0;
 }
 
+/* presenters PAGE
+----------------------------------------------- */
+
+#content_presenters {
+	margin-top:45px;
+}
+#content_presenters #intro_presenters {
+	border-top:none;
+}
+
+#content_presenters table {
+  margin: 0px auto;
+}
+
+#content_presenters table td {
+  padding: 2px 15px;
+}
+
 /* sponsors
 ----------------------------------------------- */
 
