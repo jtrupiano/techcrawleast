@@ -1,0 +1,46 @@
+.group
+  =f.label :name
+  =f.error_message_on :name
+  =f.text_field :name, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :primary_contact
+  =f.error_message_on :primary_contact
+  =f.text_field :primary_contact, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :primary_contact_email
+  =f.error_message_on :primary_contact_email
+  =f.text_field :primary_contact_email, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :primary_contact_phone_number
+  =f.error_message_on :primary_contact_phone_number
+  =f.text_field :primary_contact_phone_number, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :location
+  =f.error_message_on :location
+  =f.text_field :location, :class => :text_field
+  %span.description Ex: a simple text
+
+.group
+  =f.label :short_description
+  =f.error_message_on :short_description
+  =f.text_area :short_description, :class => :text_area
+  %span.description Ex: a simple text
+
+.group
+  =f.label :website
+  =f.error_message_on :website
+  =f.text_field :website, :class => :text_field
+  %span.description Ex: a simple text
+
+
+.group.navform.wat-cf
+  =f.submit pat(:save), :class => :button
+  =f.submit pat(:cancel), :onclick => "window.location='#{url(:presenters, :index)}';return false", :class => :button

@@ -23,3 +23,4 @@
 
 # Mounts the core application for this project
 Padrino.mount("TechcrawleastCom").to('/')
+Padrino.mount("Admin").to("/admin")

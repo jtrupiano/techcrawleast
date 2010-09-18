@@ -1,0 +1,33 @@
+.block
+  .secondary-navigation
+    %ul.wat-cf
+      %li.first.active=link_to pat(:list), url(:presenters, :index)
+      %li=link_to pat(:new), url(:presenters, :new)
+  .content
+    %h2.title
+      =pat(:all)
+      =mt(:presenter)
+    .inner
+      %table.table
+        %tr
+          %th=mat(:presenter, :name)
+          %th=mat(:presenter, :location)
+          %th=mat(:presenter, :primary_contact)
+          %th=mat(:presenter, :primary_contact_email)
+          %th=mat(:presenter, :primary_contact_phone_number)
+          %th.last="&nbsp;"
+        -@presenters.each do |presenter|
+          %tr
+            %td=link_to(presenter.name, presenter.website)
+            %td=presenter.location
+            %td=presenter.primary_contact
+            %td=presenter.primary_contact_email
+            %td=presenter.primary_contact_phone_number
+            %td.last
+              =button_to pat(:edit), url(:presenters, :edit, :id => presenter.id), :method => :get, :class => :button_to
+              ="|"
+              =button_to pat(:delete), url(:presenters, :destroy, :id => presenter.id), :method => :delete, :class => :button_to
+      .actions-bar.wat-cf
+        .actions="&nbsp;"
+
+-content_for :sidebar, partial("base/sidebar")

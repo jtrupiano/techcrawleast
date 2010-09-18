@@ -10,7 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 2) do
+
+  create_table "accounts", :force => true do |t|
+    t.string "email"
+    t.string "name"
+    t.string "surname"
+    t.string "salt"
+    t.string "crypted_password"
+    t.string "role"
+  end
 
   create_table "presenters", :force => true do |t|
     t.string "name"
