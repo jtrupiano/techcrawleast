@@ -7,7 +7,7 @@
 #     :reconnect => false,
 #     :database  => 'your_database',
 #     :pool      => 5,
-#     :username  => 'root',
+#     :username  => 'john',
 #     :password  => '',
 #     :host      => 'localhost',
 #     :socket    => '/tmp/mysql.sock'
@@ -16,7 +16,7 @@
 ActiveRecord::Base.configurations[:development] = {
   :adapter   => 'postgresql',
   :database  => "techcrawleast_com_development",
-  :username  => 'root',
+  :username  => 'john',
   :password  => '',
   :host      => 'localhost',
   :port      => 5432
@@ -26,7 +26,7 @@ ActiveRecord::Base.configurations[:development] = {
 ActiveRecord::Base.configurations[:production] = {
   :adapter   => 'postgresql',
   :database  => "techcrawleast_com_production",
-  :username  => 'root',
+  :username  => 'john',
   :password  => '',
   :host      => 'localhost',
   :port      => 5432
@@ -36,7 +36,7 @@ ActiveRecord::Base.configurations[:production] = {
 ActiveRecord::Base.configurations[:test] = {
   :adapter   => 'postgresql',
   :database  => "techcrawleast_com_test",
-  :username  => 'root',
+  :username  => 'john',
   :password  => '',
   :host      => 'localhost',
   :port      => 5432
@@ -46,7 +46,7 @@ ActiveRecord::Base.configurations[:test] = {
 # Setup our logger
 ActiveRecord::Base.logger = logger
 
-# Include Active Record class name as root for JSON serialized output.
+# Include Active Record class name as john for JSON serialized output.
 ActiveRecord::Base.include_root_in_json = true
 
 # Store the full class name (including module namespace) in STI type column.
