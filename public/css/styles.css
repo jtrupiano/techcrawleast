@@ -1,0 +1,568 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* tags
+----------------------------------------------- */
+
+body {
+	background-color: #00222e;
+	font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
+	font-size: 18px;
+	line-height: 24px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
+	text-shadow: 1px 1px 0px #fff;
+}
+h1 {
+}
+h2 {
+	font-size:21px;
+	font-weight:bold;
+}
+h3 {
+	padding-bottom:8px;
+	font-size:24px;
+	line-height:24px;
+	/*font-style:italic;*/
+	color:#00222e;
+	text-shadow: 1px 1px 0px #fff;
+}
+h4 {
+	padding-bottom:5px;
+	font-size:21px;
+	line-height:21px;
+}
+/*a:link, a:visited, a:focus {
+	text-decoration: none;
+	border-bottom: 1px solid #000;
+	color:#000;
+}*/
+
+a:link, a:visited, a:focus {
+	color:#0066cc;
+	text-decoration:none;
+	font-weight:normal;
+	border:none;
+}
+a:hover {
+	color:#0066cc;
+	color:#00ccff;
+	border-bottom:1px solid #0066cc;
+	border:none;
+}
+/* layout
+----------------------------------------------- */
+#content {
+}
+.container_wide {
+	padding:30px 0 30px 0;
+	width:100%;
+	background-color:#e4e4e4;
+	border-bottom: 1px dashed #666;
+	border-top: 1px dashed #fff;
+}
+.container_fixed {
+	width:960px;
+	margin: 0 auto 0 auto;
+}
+/* head
+----------------------------------------------- */
+
+#head {
+	margin:0;
+	padding: 10px 0 10px 0;
+	position:fixed;
+	top:0px;
+	left:0px;
+	height: auto;
+	width: 100%;
+	background-color:#00222e;
+	border-bottom: 1px solid black;
+	z-index: 1000;
+}
+#logo {
+	padding: 0 0 0 15px;
+	position:relative;
+	float:left;
+}
+#logo h2 {
+	font-size:18px;
+	font-weight:bold;
+	text-shadow:none;
+}
+#logo h2 a:link, #logo h2 a:visited, #logo h2 a:focus {
+	text-decoration:none;
+	color:#fff;
+	border:none;
+}
+#logo h2 a:hover {
+	text-decoration:none;
+	border-bottom: 1px solid #fff;
+}
+#nav {
+	position:relative;
+	float:left;
+}
+#nav a:link, #nav a:visited, #nav a:focus {
+	text-decoration:none;
+	color:#fff;
+	border:none;
+}
+#nav a:hover {
+	text-decoration:none;
+	border-bottom: 1px solid #fff;
+}
+#nav ul, #social_media ul {
+	font-size:16px;
+}
+#nav ul li {
+	margin:0 0 0 20px;
+	position:relative;
+	float:left;
+}
+#nav .register {
+	position:relative;
+	float:right;
+}
+#social_media {
+	padding-right:25px;
+	float:right;
+}
+#social_media li#twitter {
+	padding-left:25px;
+	background: url(../img/icon_twitter.png) no-repeat center left;
+}
+#social_media a:link, #social_media a:visited, #social_media a:focus {
+	color:#499ff3;
+}
+#social_media a:hover {
+	color:#fff;
+}
+/* intro
+----------------------------------------------- */
+
+#intro {
+	margin-top:45px;
+	padding-top:70px;
+	padding-bottom:60px;
+	text-align: center;
+	border:none;
+	background-color:#0461c0;
+	background-image: url(../img/background_round_wave.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#intro h1 {
+	padding:0;
+	margin:0;
+}
+/* call-to-action
+----------------------------------------------- */
+
+#intro_action {
+	background-color:#fdfee0;
+}
+.call_to_action {
+	margin: 0 10px 0 10px;
+	font-size:28px;
+	line-height:28px;
+	text-align:center;
+}
+.call_to_action h2 {
+	padding-bottom:10px;
+	font-size:36px !important;
+	line-height:36px;
+}
+.call_to_action h3 {
+	padding-bottom:0;
+	font-size:26px !important;
+	line-height:26px;
+	font-weight:normal;
+	text-transform:none;
+}
+.call_to_action a:link, .call_to_action a:visited, .call_to_action a:focus {
+	color:#ff4439;
+	border-bottom:1px solid #ff4439;
+}
+.call_to_action a:hover {
+	color:#499ff3;
+	border-bottom:1px solid #499ff3;
+}
+/* summary
+----------------------------------------------- */
+
+#summary {
+	background-color:#fff;
+	font-size:18px;
+	line-height:24px;
+}
+#summary h3 {
+	font-size:28px;
+	line-height:28px;
+}
+#summary h4 {
+	font-style:italic;
+}
+#companies, #attendees {
+	margin:0 10px 0 10px;
+	position:relative;
+	float:left;
+	width:460px;
+	text-align:center;
+}
+/* details
+----------------------------------------------- */
+
+#details {
+	border-bottom:none;
+	padding-bottom:0;
+}
+#details_text {
+	border-top:none;
+}
+#map, #venue, #event_links {
+	margin:0 10px 0 10px;
+	width:298px;
+	position:relative;
+	float:left;
+	border:1px solid #aaa;
+	background-color:#fff;
+}
+#event_links {
+	width:300px;
+	border:none;
+	background:none;
+}
+#map {
+	width:618px;
+}
+#venue {
+}
+#map iframe, #venue img {
+	padding:9px;
+}
+#event_links ul {
+	margin-top:5px;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #efefef;
+}
+#event_links li {
+	/*padding:8px 0 8px 25px;*/
+	padding:8px 0 8px 0;
+	font-size: 18px;
+	border-bottom: 1px solid #ccc;
+	border-top:1px solid #efefef;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+/*li#map_link_car {
+	background-image: url(../img/icon_car.png);
+}
+
+li#map_link_train {
+	background-image: url(../img/icon_train.png);
+}
+
+li#map_link_plane {
+	background-image: url(../img/icon_plane.png);
+}
+
+li#map_link_hotel {
+	background-image: url(../img/icon_hotel.png);
+}
+
+
+/* faqs
+----------------------------------------------- */
+
+.column_headline, .column_text {
+	position:relative;
+	float:left;
+}
+.column_headline {
+	padding:0 10px 0 10px;
+	width:300px;
+}
+.column_text {
+	padding:0 10px 0 10px;
+	width:620px;
+}
+.column_headline h3, .column_text h3 {
+	font-size:24px;
+	line-height:24px;
+}
+/* register
+----------------------------------------------- */
+
+#register {
+	background-color:#fdfee0;
+	text-align:center;
+}
+#register h3 {
+	font-size:28px;
+	line-height:28px;
+	padding:30px 0 30px 0;
+	border:1px solid #666;
+	background-color:#fff;
+}
+#register h3 a {
+	color:#ff4439;
+	border:none;
+}
+/* register PAGE
+----------------------------------------------- */
+
+#content_register {
+	margin-top:45px;
+}
+#content_register #intro_register {
+	border-top:none;
+}
+#register_form {
+	background-color:#fff;
+	border-bottom:none;
+}
+form {
+	margin-right:auto;
+	margin-left:auto;
+	width: 700px;
+}
+label {
+	width: 250px;
+	padding: 0 10px 0 0;
+	text-align: right;
+	position: relative;
+	float: left;
+}
+.form_row {
+	padding:0 0 15px 0;
+}
+.form_row p {
+	width:250px;
+	float:left;
+	text-align:right;
+	font-size:12px;
+	line-height:normal;
+}
+.form_row span {
+	padding-left:2px;
+	color:red;
+}
+#form-message {
+	color:#393;
+	font-size:21px;
+	line-height:28px;
+	padding-top:35px;
+	padding-bottom:15px;
+	text-align:center;
+}
+form button {
+	margin-left:260px;
+}
+input, textarea {
+	float:left;
+	font-size:16px;
+}
+#terms {
+	margin-top:30px;
+	margin-left:260px;
+	font-size:12px;
+	line-height:normal;
+}
+button {
+	font-size:18px;
+	padding:10px;
+}
+/* information for presenters PAGE
+----------------------------------------------- */
+
+#content_information {
+	margin-top:45px;
+}
+#content_information #intro_information {
+	border-top:none;
+}
+#information_container {
+	background-color:#fff;
+	border-bottom:none;
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
+}
+
+#information_container #information {
+  float: left;
+  width: 56%;
+  margin-right: 5%;
+}
+
+#information_container #information h3 {
+  margin-top: 10px;
+}
+
+#information_container #information li, #information_container #information p {
+  margin-right: 0px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#information_container #information ul.indent {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+#information_container #information ul.indent li {
+  margin-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 0px;
+}
+
+#information_container #photos {
+  float: left;
+  width: 38%;
+}
+
+#information_container #photos .caption {
+  font-size: 12px;
+}
+
+/* organizers PAGE
+----------------------------------------------- */
+
+#content_organizers {
+	margin-top:45px;
+}
+#content_organizers #intro_organizers {
+	border-top:none;
+}
+
+#content_organizers img {
+  float: left;
+  padding-right: 8px;
+}
+
+.container_wide_last {
+  border-bottom: 0;
+}
+
+/* presenters PAGE
+----------------------------------------------- */
+
+#content_presenters {
+	margin-top:45px;
+}
+#content_presenters #intro_presenters {
+	border-top:none;
+}
+
+#content_presenters table {
+  margin: 0px auto;
+}
+
+#content_presenters table td {
+  padding: 2px 15px;
+}
+
+/* sponsors
+----------------------------------------------- */
+
+#sponsors {
+	text-align:center;
+	background-color:#fff;
+	border:none;
+}
+#sponsors h3 {
+	font-size:18px;
+}
+#sponsors p {
+	font-size:12px;
+}
+.sponsor_box {
+	margin:15px 10px 15px 10px;
+	position:relative;
+	float:left;
+	/*height:125px;*/
+	width:300px;
+	text-align:center;/*border:1px dashed #000;*/
+}
+/* foot
+----------------------------------------------- */
+
+#foot {
+	background-color:#00222e;
+	padding:30px 0 30px 0;
+	color:#ccc;
+	font-size:14px;
+	text-align:center;
+}
+a.sig:link, a.sig:visited, a.sig:focus {
+	color:#ccc;
+	text-decoration:underline;
+}
+a.sig:hover {
+	color:#fff;
+}
+/* float clearing
+----------------------------------------------- */
+
+/* float clearing for IE6 */
+* html .clear {
+	height: 1%;
+	overflow: visible;
+}
+/* float clearing for IE7 */
+*+html .clear {
+	min-height: 1%;
+}
+/* float clearing for everyone else */
+.clear:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+.clear {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
