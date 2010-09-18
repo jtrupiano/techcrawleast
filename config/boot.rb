@@ -25,6 +25,7 @@ end
 # Add here your after load hooks
 #
 Padrino.after_load do
+  require 'foreigner'
 end
 
 Padrino.load!

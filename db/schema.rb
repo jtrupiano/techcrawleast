@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 3) do
 
   create_table "accounts", :force => true do |t|
     t.string "email"
@@ -21,14 +21,23 @@ ActiveRecord::Schema.define(:version => 2) do
     t.string "role"
   end
 
-  create_table "presenters", :force => true do |t|
-    t.string "name"
-    t.string "primary_contact"
-    t.string "primary_contact_email"
-    t.string "primary_contact_phone_number"
-    t.string "location"
-    t.text   "short_description"
-    t.string "website"
+  create_table "events", :force => true do |t|
+    t.string  "name"
+    t.integer "year"
+    t.date    "date"
   end
+
+  create_table "presenters", :force => true do |t|
+    t.string  "name"
+    t.string  "primary_contact"
+    t.string  "primary_contact_email"
+    t.string  "primary_contact_phone_number"
+    t.string  "location"
+    t.text    "short_description"
+    t.string  "website"
+    t.integer "event_id",                     :null => false
+  end
+
+  add_foreign_key "presenters", "events", :name => "presenters_event_id_fk"
 
 end
