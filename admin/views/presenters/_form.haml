@@ -40,6 +40,10 @@
   =f.text_field :website, :class => :text_field
   %span.description Ex: a simple text
 
+.group
+  =f.label :event
+  =f.error_message_on :event
+  =f.select :event, :collection => @events, :fields => [:name, :id]
 
 .group.navform.wat-cf
   =f.submit pat(:save), :class => :button

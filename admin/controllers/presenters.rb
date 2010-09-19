@@ -7,6 +7,7 @@ Admin.controllers :presenters do
 
   get :new do
     @presenter = Presenter.new
+    @events = Event.all
     render 'presenters/new'
   end
 
@@ -16,12 +17,14 @@ Admin.controllers :presenters do
       flash[:notice] = 'Presenter was successfully created.'
       redirect url(:presenters, :edit, :id => @presenter.id)
     else
+      @events = Event.all
       render 'presenters/new'
     end
   end
 
   get :edit, :with => :id do
     @presenter = Presenter.find(params[:id])
+    @events = Event.all
     render 'presenters/edit'
   end
 
@@ -31,6 +34,7 @@ Admin.controllers :presenters do
       flash[:notice] = 'Presenter was successfully updated.'
       redirect url(:presenters, :edit, :id => @presenter.id)
     else
+      @events = Event.all
       render 'presenters/edit'
     end
   end

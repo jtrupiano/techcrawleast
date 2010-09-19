@@ -25,6 +25,7 @@ class Admin < Padrino::Application
   end
 
   access_control.roles_for :admin do |role|
+      role.project_module :events, "/events"
       role.project_module :presenters, "/presenters"
       role.project_module :accounts, "/accounts"
   end
