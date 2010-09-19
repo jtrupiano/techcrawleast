@@ -492,12 +492,19 @@ button {
 	border-top:none;
 }
 
-#content_presenters table {
-  margin: 0px auto;
+#content_presenters .presenter {
+  padding-bottom: 20px;
 }
 
-#content_presenters table td {
-  padding: 2px 15px;
+#content_presenters .presenter img {
+  float: left;
+  width: 125px;
+  height: 125px;
+  padding-right: 20px;
+}
+
+#content_presenters .presenter p {
+  font-size: 85%;
 }
 
 /* sponsors

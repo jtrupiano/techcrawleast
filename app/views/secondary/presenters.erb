@@ -1,0 +1,25 @@
+<% content_for(:body) do %>
+  <div id="content_presenters">
+    <div class="container_wide" id="intro_presenters">
+      <div class="container_fixed">
+        <div>
+          <div class="call_to_action">
+            <h2>Tech Crawl East Presenting Companies</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container_wide">
+      <div class="container_fixed">
+        <% @presenters.each do |presenter| %>
+          <div class="presenter">
+            <img class="logo" />
+            <h4><%= link_to(presenter.name, presenter.website, :target => '_blank') %></h4>
+            <p><%= presenter.short_description %></p>
+          </div>
+          <div class="clear"></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
