@@ -9,7 +9,7 @@ gem 'thin' # or mongrel
 gem 'haml'
 gem 'activerecord', :require => "active_record"
 gem 'pg'
-gem 'matthuhiggins-foreigner', '0.8.2.a', :require => nil
+gem 'foreigner', '0.9.0', :require => nil
 
 group :test do
 # Test requirements
