@@ -19,6 +19,7 @@ puts "=> Located #{Padrino.bundle} Gemfile for #{Padrino.env}"
 # Add here your before load hooks
 #
 Padrino.before_load do
+  Paperclip::Railtie.insert
 end
 
 ##

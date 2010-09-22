@@ -13,7 +13,7 @@
       <div class="container_fixed">
         <% @presenters.each do |presenter| %>
           <div class="presenter">
-            <img class="logo" />
+            <div class="logo"><%= image_tag presenter.logo.url(:thumb), :alt => presenter.name %></div>
             <h4><%= link_to(presenter.name, presenter.website, :target => '_blank') %></h4>
             <p><%= presenter.short_description %></p>
           </div>

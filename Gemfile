@@ -10,13 +10,17 @@ gem 'haml'
 gem 'activerecord', :require => "active_record"
 gem 'pg'
 gem 'foreigner', '0.9.0', :require => nil
+gem 'paperclip', '2.3.3'
+
+group :development do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
 
 group :test do
-# Test requirements
-  gem 'rspec', :require => "spec", :group => "test"
-  gem 'capybara', :group => "test"
-  gem 'cucumber', :group => "test"
-  gem 'rack-test', :require => "rack/test", :group => "test"
+  gem 'rspec', :require => "spec"
+  gem 'capybara'
+  gem 'cucumber'
+  gem 'rack-test', :require => "rack/test"
 end
 
 # Padrino

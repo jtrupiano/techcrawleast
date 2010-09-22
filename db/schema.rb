@@ -28,14 +28,18 @@ ActiveRecord::Schema.define(:version => 3) do
   end
 
   create_table "presenters", :force => true do |t|
-    t.string  "name"
-    t.string  "primary_contact"
-    t.string  "primary_contact_email"
-    t.string  "primary_contact_phone_number"
-    t.string  "location"
-    t.text    "short_description"
-    t.string  "website"
-    t.integer "event_id",                     :null => false
+    t.string   "name"
+    t.string   "primary_contact"
+    t.string   "primary_contact_email"
+    t.string   "primary_contact_phone_number"
+    t.string   "location"
+    t.text     "short_description"
+    t.string   "website"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.integer  "event_id",                     :null => false
   end
 
   add_foreign_key "presenters", "events", :name => "presenters_event_id_fk"

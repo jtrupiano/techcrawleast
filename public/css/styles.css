@@ -496,10 +496,10 @@ button {
   padding-bottom: 20px;
 }
 
-#content_presenters .presenter img {
+#content_presenters .presenter .logo {
   float: left;
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
   padding-right: 20px;
 }
 
